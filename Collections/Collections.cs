@@ -2,14 +2,16 @@
 using System.Linq;
 
 namespace EsotericDevZone.Core.Collections
-{
-    public static class Collections
+{    
+    public static class Lists
     {
-        public static List<T> ListOf<T>(params T[] items) => items.ToList();        
-        public static T[] ArrayOf<T>(params T[] items) => items.ToArray();
+        public static List<T> Of<T>(params T[] items) => items.ToList();
+        public static List<T> Empty<T>() => new List<T>();
+    }
 
-        public static List<T> EmptyList<T>() => new List<T>();
-        public static T[] EmptyArray<T>() => new T[0];
-
+    public static class Arrays
+    {
+        public static T[] Of<T>(params T[] items) => items.ToArray();
+        public static T[] Empty<T>() => new T[0];
     }
 }

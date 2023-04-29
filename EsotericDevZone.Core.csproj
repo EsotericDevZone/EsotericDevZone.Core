@@ -55,5 +55,9 @@
     <Content Include="esodev2.ico" />
     <Content Include="icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <NuspecFile>EsotericDevZone.Core.nuspec</NuspecFile>
+  </PropertyGroup>
 </Project>
