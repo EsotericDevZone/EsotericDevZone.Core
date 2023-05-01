@@ -1,6 +1,6 @@
-﻿namespace EsotericDevZone.Core.Extensions
+﻿namespace EsotericDevZone.Core
 {
-    public static class IntExtensions
+    public static partial class Extensions
     {
         public static bool IsBetween(this int x, int a, int b) => a <= x && x <= b;
 
