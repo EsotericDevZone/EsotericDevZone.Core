@@ -59,6 +59,9 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\StaticTypesExtensions.cs" />
+    <Compile Include="Reflection\TypeExtensions.cs" />
+    <Compile Include="Validation\Assert.cs" />
+    <Compile Include="Validation\ValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="esodev2.ico" />

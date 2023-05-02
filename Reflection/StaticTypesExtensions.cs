@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EsotericDevZone.Core.Reflection
-{
-    public static class StaticTypesExtensions
+namespace EsotericDevZone.Core
+{    
+    public static partial class Extensions
     {
         public static IEnumerable<I> EnumeratePublicStaticProperties<I>(this Type type)
                 => type.GetProperties(BindingFlags.Static | BindingFlags.Public)
