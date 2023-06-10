@@ -18,5 +18,8 @@ namespace EsotericDevZone.Core
                 throw new ValidationException(message);
         }
 
+        public static void ThrowIfNull<T>(T value, Exception exception) where T : class => ThrowIf(value == null, exception);
+        public static void ThrowIfNull<T>(T value, string message) where T : class => ThrowIf(value == null, new ArgumentNullException(message));
+
     }
 }
