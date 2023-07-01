@@ -10,6 +10,8 @@ namespace EsotericDevZone.Core.Collections
 
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> values) => values.OrderBy(_ => Guid.NewGuid());
 
+        public static IEnumerable<T> Peek<T>(this IEnumerable<T> values, Action<T> action)
+            => values.Select(_ => { action(_); return _; });
 
         #region ArgMin/ArgMax
         public static int ArgMin<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> selector, IComparer<TKey> comparer = null)

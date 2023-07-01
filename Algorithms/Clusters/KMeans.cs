@@ -1,6 +1,7 @@
 ﻿using EsotericDevZone.Core.Collections;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace EsotericDevZone.Core.Algorithms.Clusters
         private readonly IComparer<D> DistanceComparer;
         private readonly D DistanceEpsilon;
 
-        public KMeans(Func<T[], T[], D> distance, IComparer<D> distanceComparer = null, D distanceEpsilon = default(D))
+        public KMeans(Func<T[], T[], D> distance, IComparer<D> distanceComparer = null, D distanceEpsilon = default)
         {
             Distance = distance;
             DistanceComparer = distanceComparer;
@@ -48,9 +49,9 @@ namespace EsotericDevZone.Core.Algorithms.Clusters
                 {
                     assignedCluster[i] = centroids.ArgMin(c => (Distance(c, values[i])), DistanceComparer);
                 }
-
+                
                 var d = assignedCluster.Select((c, i) => Distance(centroids[c], values[i]))
-                    .Aggregate((a, b) => (dynamic)a + b);
+                    .Aggregate((a, b) => (D)((dynamic)a + (dynamic)b));
                 bool canBreak = false;
 
                 if (Math.Abs((dynamic)d - oldDistance) < (dynamic)DistanceEpsilon) 
