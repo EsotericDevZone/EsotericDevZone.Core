@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.4.1</Version>
-    <AssemblyVersion>1.4.1</AssemblyVersion>
-    <FileVersion>1.4.1</FileVersion>
+    <Version>1.4.2</Version>
+    <AssemblyVersion>1.4.2</AssemblyVersion>
+    <FileVersion>1.4.2</FileVersion>
     <Title>EsotericDevZone.Core</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>NotImplementedfLife</Authors>
@@ -16,6 +16,7 @@
     <DelaySign>False</DelaySign>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <AssemblyOriginatorKeyFile>C:\Users\NotImpLife\Desktop\EsotericDevZone.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>

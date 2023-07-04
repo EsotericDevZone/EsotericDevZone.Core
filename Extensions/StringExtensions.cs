@@ -52,6 +52,8 @@ namespace EsotericDevZone.Core
 
         public static string FromLiteral(this string input)
         {
+            Validation.Assert(input.StartsWith("\"") && input.EndsWith("\""));
+
             string result = "";
             for (int i = 0; i < input.Length; i++)
             {
